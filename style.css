@@ -7,14 +7,21 @@
  --color-accent: #FFD166;
  --color-text: #073B4C;
 
- /* taille du font */
+ /* Taille du font */
 
  --font-size-xs: 12px;
  --font-size-s: 16px;
  --font-size-base: 20px;
  --font-size-title: 40px;
+ --font-size-xl: 64px;
  
- /*  */
- --space-01: 60px;
+ /* Padding */
+ --padding-01: 10px;
+ --padding-02: 16px;
+ --padding-0: 60px;
 
+}
+header{
+    display: flex;
+    background-color:var(--color-bg-dark);
 }
