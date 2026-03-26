@@ -19,4 +19,13 @@
 - Pour la taille du font, j'ai trouvé 5 tailles qui revient souvent dans le site.
 - Pour le padding, j'ai aussi trouvé plusieurs tailles qui revient.
 
-## 
+## Décision
+Je me suis contenté de principalment suivre les directions de Figma. J'ai ensuite essayer de certaines des erreurs.
+
+##Difficulté
+J'ai manqué d'organisation lors de la réalisation du projet. Je me suis pris à la dernière minute ce qui m'a laissé moins de temps pour faire quelque chose de satifaisant. Je n'ai pas rendu le site fluide. De plus, j'ai perdu beaucoup de temps à trouver comment changer les fonts des titres de ma page
+
+##Utilisation de IA
+prompt: comment je peux importer le font dans un css
+IA: Gemini 3
+Date: 23 mars
