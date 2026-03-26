@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+*{
+  box-sizing: border-box;
+}
+
+:root {
+
+   /* Couleurs du sites */
+ --color-bg-dark: #073B4C;
+ --color-primary: #118AB2;
+ --color-secondary: #06D6A0;
+ --color-accent: #FFD166;
+ --color-text: #1A2E1A;
+
+ /* Taille du font */
+
+ --font-size-xs: 12px;
+ --font-size-s: 16px;
+ --font-size-base: 20px;
+ --font-size-h1: 64px;
+ --font-size-h2: 40px;
+ /* Padding */
+ --padding-01: 10px;
+ --padding-02: 16px;
+ --padding-0: 60px;
+
+}
+/* Section - Navbar 
+    <header class="section">
+
+        <div class="section__brand">
+        ...
+        </div>
+
+        <nav class="section__nav">
+        ...
+        </nav>
+        </header>
+
+  Élément : 
+  section__logo : Le logo en haut à gauche du site.
+  section__title : Le titre juste en dessous du logo.
+  section__nav : Les liens du navbar.
+  section__button : Le bouton en haut à droite.
+  section__brand : Le logo et le titre ensemble.
+*/
+.section{
+display: flex;
+padding: 10px 60px;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+background: var(--color-bg-dark, #073B4C);
+}
+
+.section__logo {
+  color: var(--color-secondary, #06D6A0); 
+  text-shadow: 0 0 6.2px rgba(255, 255, 255, 0.73);
+  font-family: Monoton;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px; 
+}
+
+.section__title{
+color: var(--color-secondary, #06D6A0);
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; /* 122.222% */
+letter-spacing: 0.54px;
+}
+
+
+.section__nav{
+display: flex;
+padding: 2px 24px;
+justify-content: center;
+align-items: center;
+gap: 24px;
+flex: 1 0 0;
+}
+
+.section__nav__link{
+color: #FFF;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; 
+}
+
+
+.section__button{
+display: flex;
+padding: 2px 24px;
+justify-content: flex-end;
+align-items: center;
+color: var(--color-text, #1A2E1A);
+text-align: center;
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+border-radius: 4px;
+background: var(--color-accent, #FFD166);
+}
+/*Hero
+Utilisation: 
+<h1 class="hero__title">Lumière.Urbaine</h1>
+<div class="hero__subtitle">3 jours de musique et d'art immersif.</div>
+
+
+Élément: 
+hero__container: toute la partie hero
+hero__title: Le titre principale du site
+hero__subtitle: Le sous-titre du site
+hero__button: Les buttons du hero ensemble
+hero__secondary: le bouton <<En savoir plus>>
+hero__primary: le bouton <<Achetez des billets>>
+
+*/
+.hero__container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+background: url(images/bg_hero.jpg)
+}
+
+
+.hero__title{
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+color: #FFF;
+text-shadow: 0 0 5.7px #06D6A0, 0 0 33.9px #06D6A0;
+font-family: Monoton;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 75% */
+}
+
+
+.hero__subtitle{
+color: #FFF;
+font-family: Roboto;
+font-size: 40px;
+font-style: normal;
+font-weight: 700;
+line-height: 48px;  
+}
+
+.hero__button{
+display: flex;
+align-items: flex-start;
+align-content: flex-start;
+gap: 12px;
+flex-wrap: wrap;
+}
+
+
+.hero__secondary{
+display: flex;
+width: 240px;
+padding: 12px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+border: 1px solid #FFF;
+background: rgba(0, 0, 0, 0.62);
+color: #FFF;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+}
+
+
+.hero__primary{
+display: flex;
+width: 240px;
+padding: 12px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 8px;
+background: var(--color-primary, #118AB2);
+}
+/*
+Products
+
+Utilisation: 
+<div class="products">
+...
+
+</div>
+Éléments:
+products__list : Les trois tableaux ensembles
+products__title : Le titres de la section
+products_image : Un tableau
+
+products__image__vedette: variantes où le contour est différents
+products__tag: le petit tag << En vedette>>
+products__text__image: Le texte au centre des images
+products__text: les textes en dessous des images ensemble
+products__image__title: Le titre de products__text
+products__image__subtitle: le sous-titre de products__text
+
+*/
+
+
+.products{
+display: flex;
+width: 1844px;
+flex-direction: column;
+align-items: center;
+background: #FFF;
+}
+.products__list{
+  display: flex;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
+
+.products__title{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+align-self: stretch;
+}
+.products__image{
+flex: 1 0 0;
+align-self: stretch;
+
+}
+.products__image__vedette{
+display: flex;
+min-width: 296px;
+flex-direction: column;
+align-items: center;
+flex: 1 0 0;
+align-self: stretch;
+}
+
+.products__tag{
+display: flex;
+padding: 4px 8px;
+flex-direction: column;
+justify-content: flex-start;
+align-items: flex-start;
+border-radius: 6px 0;
+background: var(--color-accent, #FFD166);
+color: #000;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; 
+}
+
+.products__text__image{
+
+  display: flex;
+flex-basis: 475px;
+height: 340px;
+flex-direction: column;
+justify-content: center;
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px;
+background: rgba(217, 217, 217, 0.50); 
+}
+.products__text{
+display: flex;
+flex-basis: 451px;
+height: 56px;
+flex-direction: column;
+justify-content: center; 
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: 16px; 
+}
+.products__subtitle{
+color: var(--color-primary, #118AB2);
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 175% */
+}
+.products__title__image{
+align-self: stretch; 
+color: var(--color-text, #073B4C);
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 100% */
+}
+/*
+Contents
+
+ <div class="contents">
+
+  ...
+
+  </div>
+
+
+  Élément:
+  content__container: le content dans son ensemble
+  content__container__title: le titre de la section
+  content__container__subtitle: le sous-titre de la section
+  content__list: le tableau dans son ensemble
+  content__article__image: les images
+  contentarticle__title: le titre des images
+  content__article__text: le texte des images
+
+*/
+.contents{
+display: flex;
+padding: 60px 170px;
+justify-content: center;
+align-items: center;
+gap: 60px;
+align-self: stretch;
+background: var(--color-primary, #118AB2);
+}
+.contents__container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+}
+.contents__container__title{
+color: #000;
+font-family: Monoton;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; 
+}
+.contents__container__subtitle{
+color: #000;
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.contents__list{
+display: flex;
+padding: 20px 0;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 40px;
+flex: 1 0 0;
+}
+.contents__article__title{
+color: var(--color-text, #073B4C);
+font-family: Roboto;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 140% */
+}
+.contents__article__text{
+  color: var(--color-text, #073B4C);
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+
+
+}
+/*
+List
+  <div class="list">
+  ...
+  </div>
+
+
+  Élément:
+  list__container: La section du titre
+  list__container__title: le titre
+  list__row: le tableau
+  list__row__item: une ligne du tableau
+  list__item__icon: icone
+  list__item__title: le titre sous l'icone
+  list__item__subtitle: le sous-titre sous l'icon 
+*/
+.list{
+display: flex;
+padding: 60px 170px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 60px;
+align-self: stretch;
+background: var(--color-primary, #118AB2);
+}
+.list__partenaires{
+display: flex;
+padding: 60px 170px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 60px;
+align-self: stretch;
+}
+.list__container{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 24px;
+align-self: stretch;
+}
+.list__container__title{
+color: #000;
+text-align: center;
+font-family: Monoton;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; /* 120% */
+}
+.list__row{
+display: flex;
+align-items: flex-start;
+gap: 40px;
+align-self: stretch;
+}
+.list__row__item{
+display: flex;
+padding: 12px 0;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex: 1 0 0;  
+}
+.list__item__icon{
+display: flex;
+width: 100px;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+align-self: stretch;
+}
+.list__item__title{
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; 
+}
+.list__Item__subtitle{
+color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 28px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px;
+}
+/*
+form
+  <div class="form">
+  ...
+  </div>
+
+
+  Élément:
+  form__container: La section du haut
+  form__container__title: le titre
+  form__container__description : le sous titre de la page
+  form__list: le formulaire avec les boutons
+  form__list_row : le formulaire sans les boutons
+  form__row__label: la libelé
+  list__item__input: la zone de texte
+  list__button__primary: le bouton <<Annuler>>
+  list__button__secondary: le bouton <<Envoyer>>  
+*/
+.form{
+display: flex;
+width: 1844px;
+flex-direction: column;
+align-items: center;  
+}
+.form__container{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
+flex: 1 0 0;
+}
+.form__container__title{
+color: var(--color-text, #073B4C);
+font-family: Monoton;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 48px; 
+}
+.form__container__description{
+color: var(--color-text, #073B4C);
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+.form__list{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+gap: 40px;
+flex: 1 0 0;
+border:var(--color-accent,#FFD166)
+
+}
+.form__list__row{
+display: flex;
+align-items: flex-start;
+gap: 80px;
+align-self: stretch;
+}
+.form__row__label{
+color: var(----color-text, #073B4C);
+font-family: Roboto;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; 
+}
+.form__row__input{
+display: flex;
+padding: 8px 12px;
+align-items: center;
+gap: 4px;
+align-self: stretch;
+}
+.form__button_primary{
+display: flex;
+padding: 12px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;
+border-radius: 8px;
+border: 1px solid var(--color-bg-dark, #073B4C);
+}
+.form__button__secondary{
+display: flex;
+padding: 12px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+flex: 1 0 0;
+border-radius: 8px;
+background: var(--color-bg-dark, #073B4C);
+}
